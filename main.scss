@@ -1,0 +1,47 @@
+.thorns {
+    & > div {
+        width: 30px;
+        height: 30px;
+        background: #066406;
+        top: 100px;
+        left: 10px;
+        
+        &:after {
+            width: 41px;
+            height: 31px;
+            @include border-radius(100%);
+            background: #122139;
+            content: "";
+            position: absolute;
+            left: -12px;
+            top: 17px;
+        }
+        &:before {
+            width: 41px;
+            height: 31px;
+            @include border-radius(100%);
+            background: #122139;
+            content: "";
+            position: absolute;
+            left: -11px;
+            top: -11px;
+            z-index: 0;
+        }
+        
+        &:nth-child(2) {
+            top: 150px;
+            @include transform(rotate(180deg));
+            left: 45px;
+        }
+        &:nth-child(3) {
+            top: 180px;
+        }
+        &:nth-child(4) {
+            top: 220px;
+            @include transform(rotate(180deg));
+            left: 45px;
+        }
+        
+    }
+    
+}
